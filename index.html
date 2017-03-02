@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"  charset="utf-8" >
+    <title>可解除的触控事件</title>
+    <script src="./KaimerCore.js"></script>
+    <style>
+        #target{
+            width:100%;
+            height:100%;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+<div id="target">XXXXXX</div>
+<script>
+    var tag1 = document.getElementById('target');
+    var _add = 0;
+    bindTouchEvents(tag1,{
+        clickCB:function(e){
+            console.log("点击了",tag1.innerHTML)
+            tag1.innerText="&&XX^*()"+_add++;
+        }
+    });
+
+
+</script>
+</body>
+</html>
+
